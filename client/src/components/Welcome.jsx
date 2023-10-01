@@ -37,7 +37,10 @@ const Welcome = () => {
     const { addressTo, amount, keyword, message } = formData;
     if (!addressTo || !amount || !keyword || !message) return;
     await sendTransaction();
+    // toast.success('Transaction completed');
+    window.onload = () => {
     toast.success('Transaction completed');
+    };
   };
 
   return (
